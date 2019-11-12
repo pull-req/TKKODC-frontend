@@ -45,5 +45,8 @@
       "browser": true,
       "node": true
     }
+  },
+  "dependencies": {
+    "axios": "^0.19.0"
   }
 }
