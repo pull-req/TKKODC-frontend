@@ -76,7 +76,12 @@ module.exports = [{
       },
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'index.html')
+      template: path.resolve(__dirname, 'index.html'),
+      filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'post.html'),
+      filename: 'post.html'
     })
   ],
   devServer: {
