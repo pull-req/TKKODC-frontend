@@ -22,15 +22,18 @@
     <link rel="stylesheet" href="item/css/style.css">
 </head>
 <body>
-<div class="search-icon">
-    <img class="search" src="item/img/search.png" alt=""/>
+<div class="search-icon close-only">
     <img class="close" src="item/img/close.png" alt=""/>
 </div>
-<form class="search-form" action="">
+<form class="post-form" action="">
     <ul>
         <li>
-            Keyword
+            Title
             <input type="text" placeholder="keyword">
+        </li>
+        <li>
+            Text
+            <textarea rows="7" placeholder="Text"></textarea>
         </li>
         <li class="language">
             Language
@@ -50,33 +53,8 @@
             </ul>
         </li>
     </ul>
-    <button>Search</button>
+    <button>Post</button>
 </form>
-
-<div class="map">
-</div>
-<ul class="pin-box">
-    <li class="pin">
-        <img src="/item/img/pin.png" alt="">
-        <div class="ttl"><a href="#pin01" rel="modal:open">乗る番線について</a></div>
-    </li>
-</ul>
-<div id="pin01" class="modal">
-    <h2>乗る番線について</h2>
-    <ul class="tag-list">
-        <li>渋谷ハロウィン</li>
-        <li>渋谷ハロウィン</li>
-    </ul>
-    <p class="comment">
-        ここでは、2番線と3番線を間違いやすいですが、乗りたい列車である
-        ここでは、2番線と3番線を間違いやすいですが、乗りたい列車であるここでは、2番線と3番線を間違いやすいですが、乗りたい列車である。
-    </p>
-</div>
-
-<a href="post.html" class="icon icon--plus">
-    <span class="icon__mark"></span>
-</a>
-
 <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -85,7 +63,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 <script>
     $('.search-icon').click(function(){
-        $(this).toggleClass('clicked');
+        window.location.href = "/";
     });
     $('.map').click(function(){
         $('.pin').removeClass('clicked');
