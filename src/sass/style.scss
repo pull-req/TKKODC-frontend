@@ -12,30 +12,53 @@ $tb-min: 960px;
 $sp-max: 559px;
 $sp-min: 560px;
 
-h2 {font-size: 1.50rem;font-weight: bold;}
-h3 {font-size: 1.25rem;font-weight: bold;}
-h4 {font-size: 1.00rem;font-weight: bold;}
-h5 {font-size: 0.75rem;font-weight: bold;}
-p  {font-size: 1.00rem;font-weight: normal;}
+h2 {
+  font-size: 1.50rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.00rem;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.00rem;
+  font-weight: normal;
+}
 
 $black: #333;
 $gray: #ddd;
 $primary: #64A9FF;
 
-input,textarea {
+input,
+textarea {
   &::placeholder {
     color: #ddd;
   }
 }
-  // IE
-input,textarea {
+
+// IE
+input,
+textarea {
   &:-ms-input-placeholder {
     color: #ddd;
   }
 }
 
-  // Edge
-input,textarea {
+// Edge
+input,
+textarea {
   &::-ms-input-placeholder {
     color: #ddd;
   }
@@ -48,15 +71,20 @@ input,textarea {
 form {
   padding-top: 0;
   max-width: 400px;
+
   ul {
     padding: 0 20px;
     margin: 0 auto;
+
     li {
       margin: 20px 0;
       font-size: 1rem;
     }
   }
-  input[type="text"],button,textarea {
+
+  input[type="text"],
+  button,
+  textarea {
     font-size: 1rem;
     margin-top: 10px;
     padding: 5px 15px;
@@ -68,6 +96,7 @@ form {
     display: block;
 
   }
+
   button {
     border: none;
     width: 100px;
@@ -90,9 +119,11 @@ $md-radio-ripple-size: 10px;
   0% {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.0);
   }
+
   50% {
     box-shadow: 0 0 0 $md-radio-ripple-size rgba(0, 0, 0, 0.1);
   }
+
   100% {
     box-shadow: 0 0 0 $md-radio-ripple-size rgba(0, 0, 0, 0);
   }
@@ -105,11 +136,13 @@ $md-radio-ripple-size: 10px;
 
   input[type="radio"] {
     display: none;
-    &:checked + label:before {
+
+    &:checked+label:before {
       border-color: $primary;
       animation: ripple 0.2s linear forwards;
     }
-    &:checked + label:after {
+
+    &:checked+label:after {
       transform: scale(1);
     }
   }
@@ -122,13 +155,16 @@ $md-radio-ripple-size: 10px;
     margin-bottom: 0;
     cursor: pointer;
     vertical-align: bottom;
-    &:before, &:after {
+
+    &:before,
+    &:after {
       position: absolute;
       content: '';
       border-radius: 50%;
       transition: all .3s ease;
       transition-property: transform, border-color;
     }
+
     &:before {
       left: 0;
       top: 0;
@@ -136,14 +172,15 @@ $md-radio-ripple-size: 10px;
       height: $md-radio-size;
       border: 2px solid $gray;
     }
+
     &:after {
       margin: auto 0;
       top: 5px;
       left: 5px;
-      width:$md-radio-checked-size;
-      height:$md-radio-checked-size;
+      width: $md-radio-checked-size;
+      height: $md-radio-checked-size;
       transform: scale(0);
-      background:$primary;
+      background: $primary;
     }
   }
 }
@@ -153,7 +190,7 @@ $md-radio-ripple-size: 10px;
 ------------------*/
 
 .map {
-  background-image: url("/item/img/map.png");
+  background-image: url("/img/map.png");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -167,6 +204,7 @@ $md-radio-ripple-size: 10px;
     top: 200px;
     left: 100px;
     transition: .3s;
+
     &.clicked {
       transform: scale(1.2);
     }
@@ -178,6 +216,7 @@ $md-radio-ripple-size: 10px;
       top: 10px;
       width: 0;
       opacity: 0;
+
       &:before {
         transition: .3s;
         opacity: 0;
@@ -192,6 +231,7 @@ $md-radio-ripple-size: 10px;
         border-width: 10px 10px 10px 0;
         border-color: transparent #fff transparent transparent;
       }
+
       a {
         background-color: white;
         padding: 10px;
@@ -201,13 +241,16 @@ $md-radio-ripple-size: 10px;
         color: $primary;
       }
     }
+
     &.clicked {
       img {
         filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
       }
+
       .ttl {
         width: initial;
         opacity: 1;
+
         &:before {
           opacity: 1;
         }
@@ -215,18 +258,22 @@ $md-radio-ripple-size: 10px;
     }
   }
 }
+
 /*------------------
  モーダル
 ------------------*/
 
 .modal {
-  padding: 20px!important;
+  padding: 20px !important;
+
   >h2 {
     font-weight: normal;
   }
+
   .tag-list {
     padding: 5px 0 10px 0;
     border-bottom: 1px solid #cccccc;
+
     li {
       font-size: 0.75rem;
       display: inline-block;
@@ -236,6 +283,7 @@ $md-radio-ripple-size: 10px;
       padding: 5px 8px;
     }
   }
+
   >.comment {
     line-height: 1.5;
     margin-top: 10px;
@@ -243,8 +291,9 @@ $md-radio-ripple-size: 10px;
 }
 
 .blocker {
-  background-color: rgba(0,0,0,0.5) !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
 }
+
 .modal {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) !important;
 }
@@ -258,19 +307,23 @@ $md-radio-ripple-size: 10px;
   position: fixed;
   top: 20px;
   right: 20px;
-  >img {
-  }
+
+  >img {}
+
   >.search {
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
     display: block;
   }
+
   >.close {
     display: none;
   }
+
   &.clicked {
     >.search {
       display: none;
     }
+
     >.close {
       display: block;
     }
@@ -289,29 +342,36 @@ $md-radio-ripple-size: 10px;
   right: 20px;
   width: 48px;
   height: 48px;
-  >ul >li:last-child {
+
+  >ul>li:last-child {
     padding-bottom: 20px;
     border-bottom: 1px solid $gray;
   }
-  >ul li >.md-radio {
+
+  >ul li>.md-radio {
     margin-top: 10px;
     display: flex;
     align-items: center;
   }
-  >ul li >.tag-list {
+
+  >ul li>.tag-list {
     padding: 0;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+
     li {
       margin: 10px 10px 0 0;
+
       input {
         display: none;
-        &:checked + label {
+
+        &:checked+label {
           background-color: $primary;
           color: white;
         }
       }
+
       label {
         font-size: 0.75rem;
         display: inline-block;
@@ -322,11 +382,13 @@ $md-radio-ripple-size: 10px;
       }
     }
   }
+
   >button {
     margin-left: calc(100% - 120px);
   }
 }
-.search-icon.clicked + .search-form {
+
+.search-icon.clicked+.search-form {
   padding-top: 60px;
   border-radius: 0;
   top: 0;
@@ -346,7 +408,9 @@ $md-radio-ripple-size: 10px;
   height: 48px;
   background: $primary;
   border-radius: 50%;
-  &::before, &::after {
+
+  &::before,
+  &::after {
     position: absolute;
     top: 23px;
     left: 50%;
@@ -357,18 +421,20 @@ $md-radio-ripple-size: 10px;
     background-color: white;
     transform: translateX(-50%);
   }
+
   &::after {
     top: 50%;
     left: 14px;
     transform: rotate(90deg);
   }
+
   &.clicked {
     transform: rotate(90deg);
   }
 }
 
 
-.close-only >.close {
+.close-only>.close {
   display: block;
 }
 
@@ -380,6 +446,7 @@ $md-radio-ripple-size: 10px;
   right: 0;
   width: 100%;
   height: 100vh;
+
   >.close {
     display: block;
   }

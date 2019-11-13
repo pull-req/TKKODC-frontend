@@ -1,4 +1,4 @@
-
-item/.DS_Store
+node_modules/
+.DS_Store
 *.xml
 *.iml
